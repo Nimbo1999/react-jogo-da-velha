@@ -36,6 +36,7 @@ class App extends React.Component {
 
   render(){
     return (
+      <>
       <div className="App">
         <h2>Jogo da Velha</h2>
 
@@ -61,6 +62,11 @@ class App extends React.Component {
         <button onClick={this.iniciarJogo}>Confirmar</button>
         <br/><br/>
       </div>
+
+      <footer>
+        <p>Created with Reactjs</p>
+      </footer>
+    </>
     );
   }
 }
