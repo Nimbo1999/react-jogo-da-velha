@@ -44,7 +44,7 @@ class App extends React.Component {
           type="text"
           value={this.state.jogador1}
           id="jogador1"
-          size="10"
+          size="15"
           onChange={this.jogador1HandleChange}
         />
         <br/><br/>
@@ -54,13 +54,12 @@ class App extends React.Component {
           type="text"
           value={this.state.jogador2}
           id="jogador2"
-          size="10"
+          size="15"
           onChange={this.jogador2HandleChange}
         />
         <br/><br/>
         <button onClick={this.iniciarJogo}>Confirmar</button>
         <br/><br/>
-        <div id="Tabuleiro"></div>
       </div>
     );
   }

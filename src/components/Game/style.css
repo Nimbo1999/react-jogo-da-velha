@@ -15,3 +15,28 @@ ol, ul {
 .game-info {
     margin: 30px 0px 0px 20px;
 }
+
+.game-info ol li {
+    padding: 5px;
+    width: 120px;
+}
+
+.game-info ol li button{
+    font-size: 15px;
+    background-color: #483D8B;
+    color: #fff;
+    width: 120px;
+    height: 35px;
+}
+
+.status-game {
+    margin-top: 15vh;
+}
+
+div b {
+    margin-left: 35vw;
+    font-family: 'Gruppo', cursive;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+}

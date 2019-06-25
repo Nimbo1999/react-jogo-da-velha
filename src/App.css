@@ -1,33 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Gruppo&display=swap');
+
 .App {
+  margin-top: 20vh;
   text-align: center;
+  background-color: #7362dd;
+  width: 400px;
+  border-radius: 18px;
+  margin-left: 35vw;
+  padding: 10px;
+  -webkit-box-shadow: 4px 4px 16px -2px rgba(0,0,0,0.68);
+  -moz-box-shadow: 4px 4px 16px -2px rgba(0,0,0,0.68);
+  box-shadow: 4px 4px 16px -2px rgba(0,0,0,0.68);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 26px;
+  font-family: 'Gruppo', cursive;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+label {
+  font-size: 20px;
+  font-family: 'Gruppo', cursive;
+  font-weight: 600;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  color:rgb(104, 104, 104);
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Gruppo', cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus {
+  color: #333;
+}
+
+button {
+  font-family: 'Gruppo', cursive;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px #333;
+  color: #333;
+  width: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #F0FFFF;
 }
