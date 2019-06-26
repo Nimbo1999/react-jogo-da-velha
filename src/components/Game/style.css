@@ -2,6 +2,11 @@ ol, ul {
     padding-left: 30px;
 }
 
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+
 .game-board {
     margin: 30px 10px 0px 20px;
 }
@@ -30,7 +35,23 @@ ol, ul {
 }
 
 .status-game {
-    margin-top: 15vh;
+    margin-top: 10vh;
+}
+
+.ButtonRodada{
+    margin-left: 35vw;
+    font-family: 'Gruppo', cursive;
+    font-size: 18px;
+    margin-top: 5px;
+    width: 190px;
+    color: #fff;
+    background-color: rgb(161, 148, 250);
+}
+
+.ButtonRodada:hover{
+    color: #fff;
+    background-color: #483D8B;
+    cursor: pointer;
 }
 
 div b {

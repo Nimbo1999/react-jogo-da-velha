@@ -51,6 +51,7 @@ button {
   font-size: 18px;
   font-weight: bold;
   background-color: #F0FFFF;
+  cursor: pointer;
 }
 
 footer p{

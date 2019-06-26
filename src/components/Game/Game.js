@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Board from '../Board/Board';
+import App from '../../App'
 import './style.css';
 
 class Game extends React.Component {
@@ -39,13 +41,23 @@ class Game extends React.Component {
         });
     }
 
+    changePlayer(){
+        ReactDOM.render(
+            <App/>,
+            document.getElementById('root')
+        )
+    }
+
     render(){
         const history = this.state.history;
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
 
+        let status;
+        let round = 0;
         const moves = history.map((step, move) => {
             var desc = move ? 'Jogada #' + move : 'Início do jogo';
+            round ++;
             if(move === 9){
                 desc = "Fim do jogo."
             }
@@ -56,9 +68,13 @@ class Game extends React.Component {
             );
         });
 
-        let status;
+        let novaRodada = true;
         if(winner){
             status = 'Vencedor: ' + (winner === 'X' ? this.props.nomJogador1 : this.props.nomJogador2) + '!';
+            novaRodada = false;
+        } else if(round === 10) {
+            status = "Partida empatada!"
+            novaRodada = false;
         } else {
             status = 'Próximo jogador: ' +
             (this.state.xIsNext ? this.props.nomJogador1 : this.props.nomJogador2);
@@ -66,7 +82,17 @@ class Game extends React.Component {
 
         return(
             <div>
-                <div className="status-game"><b>{status}</b></div>
+                <div className="status-game">
+                    <b>{status}</b><br/>
+                    <br/>
+                    <button
+                        onClick={this.changePlayer}
+                        className="ButtonRodada"
+                        hidden={novaRodada}
+                    >
+                        Mudar Jogadores
+                    </button>
+                </div>
                 <div className="game">
                     <div className="game-board">
                         <Board 

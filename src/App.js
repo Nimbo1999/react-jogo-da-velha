@@ -9,14 +9,18 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      jogador1 : "Player 1",
-      jogador2 : "Player 2",
+      jogador1 : "Jogador 1",
+      jogador2 : "Jogador 2",
     }
 
     this.jogador1HandleChange = this.jogador1HandleChange.bind(this)
     this.jogador2HandleChange = this.jogador2HandleChange.bind(this)
     this.iniciarJogo = this.iniciarJogo.bind(this)
 
+  }
+
+  novaRodada = () =>{
+    this.setState({rodada: this.state.rodada + 1 })
   }
 
   jogador1HandleChange(event){
@@ -37,36 +41,36 @@ class App extends React.Component {
   render(){
     return (
       <>
-      <div className="App">
-        <h2>Jogo da Velha</h2>
+        <div className="App">
+          <h2>Jogo da Velha</h2>
 
-        <label htmlFor="jogador1">Nome do jogador 1 (X)</label><br/>
-        <input
-          type="text"
-          value={this.state.jogador1}
-          id="jogador1"
-          size="15"
-          onChange={this.jogador1HandleChange}
-        />
-        <br/><br/>
+          <label htmlFor="jogador1">Nome do jogador 1 (X)</label><br/>
+          <input
+            type="text"
+            value={this.state.jogador1}
+            id="jogador1"
+            size="20"
+            onChange={this.jogador1HandleChange}
+          />
+          <br/><br/>
 
-        <label htmlFor="jogador2">Nome do jogador 2 (O)</label><br/>
-        <input
-          type="text"
-          value={this.state.jogador2}
-          id="jogador2"
-          size="15"
-          onChange={this.jogador2HandleChange}
-        />
-        <br/><br/>
-        <button onClick={this.iniciarJogo}>Confirmar</button>
-        <br/><br/>
-      </div>
+          <label htmlFor="jogador2">Nome do jogador 2 (O)</label><br/>
+          <input
+            type="text"
+            value={this.state.jogador2}
+            id="jogador2"
+            size="20"
+            onChange={this.jogador2HandleChange}
+          />
+          <br/><br/>
+          <button onClick={this.iniciarJogo}>Confirmar</button>
+          <br/><br/>
+        </div>
 
-      <footer>
-        <p>Created with Reactjs</p>
-      </footer>
-    </>
+        <footer>
+          <p>Created with Reactjs</p>
+        </footer>
+      </>
     );
   }
 }
